@@ -1,0 +1,48 @@
+{
+    "Musicas":[
+        {
+            "id":1,
+            "Artista":"AC/DC",
+            "Musica":"Thunderstruck teste",
+            "Album":"Algum"
+        },
+        {
+            "id":2,
+            "Artista":"AC/DC",
+            "Musica":"Thunderstruck",
+            "Album":"Algum"
+        },
+        {
+            "id":3,
+            "Artista":"AC/DC",
+            "Musica":"Thunderstruck teste",
+            "Album":"Algum"
+        },
+        {
+            "id":4,
+            "Artista":"AC/DC",
+            "Musica":"Thunderstruck",
+            "Album":"Algum"
+        },
+        {
+            "id":5,
+            "Artista":"AC/DC",
+            "Musica":"Thunderstruck teste",
+            "Album":"Algum"
+        },
+        {
+            "id":6,
+            "Artista":"AC/DC",
+            "Musica":"Thunderstruck",
+            "Album":"Algum"
+        }
+    ],
+    "Fila":[
+        {            
+            "id":1,
+            "Artista":"AC/DC",
+            "Musica":"Thunderstruck teste",
+            "Album":"Algum"            
+        }
+    ]
+}
