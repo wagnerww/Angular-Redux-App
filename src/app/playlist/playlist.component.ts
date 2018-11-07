@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { PlaylistService } from 'src/app/services/playlist/playlist.service';
 import {PlaylistInterface} from 'src/app/interfaces/playlist.Interface';
-import { Playlist } from 'src/app/models/playlist';
+import { MusicaModel } from 'src/app/models/Musica.Model';
 
 @Component({
   selector: 'app-playlist',
@@ -10,8 +10,8 @@ import { Playlist } from 'src/app/models/playlist';
 })
 export class PlaylistComponent implements OnInit {
 
-  playlist : PlaylistInterface;
-  Model:Playlist;
+  playlist : PlaylistInterface[];
+  Model:MusicaModel;
 
   constructor(private services:PlaylistService) { }
 

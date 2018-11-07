@@ -1,4 +1,4 @@
-export class Playlist {
+export class MusicaModel {
     constructor(
        public id:number,
        public artista:String,

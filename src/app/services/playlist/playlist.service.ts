@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Playlist } from 'src/app/models/playlist';
+import { MusicaModel } from 'src/app/models/Musica.Model';
 import {PlaylistInterface} from 'src/app/interfaces/playlist.Interface';
 
 
@@ -9,11 +9,11 @@ import {PlaylistInterface} from 'src/app/interfaces/playlist.Interface';
 })
 export class PlaylistService {
 
-  Model: Playlist;
+  Model: MusicaModel;
 
   constructor(private http:HttpClient) { }
 
   getPlaylist(){
-      return this.http.get<PlaylistInterface>('http://localhost:3000/Musicas/');  
+      return this.http.get<PlaylistInterface[]>('http://localhost:3000/Musicas/');  
   }
 }

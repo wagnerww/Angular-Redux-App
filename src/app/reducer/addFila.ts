@@ -1,19 +1,24 @@
 import { ActionReducer, Action } from '@ngrx/store';
+import { FilaService } from 'src/app/services/fila/fila.service';
+import { FilaInterface } from 'src/app/interfaces/fila.interface';
 
-export const INCREMENT = 'INCREMENT';
-export const DECREMENT = 'DECREMENT';
-export const RESET = 'RESET';
+export const addMusica = 'addMusica';
+export const removeMusica = 'removeMusica';
+export const limparFila = 'limparFila';
 
-export function addFilaReducer(state: number = 0, action: Action) {
+
+export function addFilaReducer(state:FilaInterface, action: Action) {
+	console.log('type ', action)
 	switch (action.type) {
-		case INCREMENT:
-			console.log('chefou ',state);
-			return state + 1;
+		case addMusica:
+			state = FilaService.prototype.addFila(action);
+			console.log('state ',state);
+			return state;
 
-		case DECREMENT:
-			return state - 1;
+		case removeMusica:
+			return state;
 
-		case RESET:
+		case limparFila:
 			return 0;
 
 		default:

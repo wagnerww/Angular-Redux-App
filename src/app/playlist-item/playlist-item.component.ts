@@ -1,9 +1,10 @@
 import { Component, OnInit , Input} from '@angular/core';
-import { Playlist } from 'src/app/models/playlist';
+import { MusicaModel } from 'src/app/models/Musica.Model';
 import { FilaService } from 'src/app/services/fila/fila.service';
 import { Store } from '@ngrx/store';
 import { PlaylistInterface } from 'src/app/interfaces/playlist.Interface';
-import { INCREMENT, DECREMENT, RESET } from 'src/app/reducer/addFila';
+import { addMusica } from 'src/app/reducer/addFila';
+import { MusicaInterface } from 'src/app/interfaces/musica.interface';
 
 interface AppState {
   counter: number;
@@ -16,17 +17,21 @@ interface AppState {
 })
 export class PlaylistItemComponent implements OnInit {
 
-  @Input() music:Playlist;
+  @Input() Music:MusicaInterface;
 
   constructor(private service:FilaService, private store: Store<AppState>) { }
 
+  musicInterface:PlaylistInterface;
+
   ngOnInit() {
-    console.log('mod ', this.music);
+    console.log('mod ', this.Music);
   }
 
-  addFila(){
-    console.log('chamou fn');
-    this.store.dispatch({ type: INCREMENT });
+  addFila(Musica:MusicaInterface){
+  
+    console.log('chamou fn', Musica);
+    
+    this.store.dispatch({ type: addMusica,  Musica });
     //this.service.addFila(Model);
   }
 
