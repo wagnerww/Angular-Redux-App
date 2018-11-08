@@ -15,6 +15,7 @@ import { PlaylistItemComponent } from './playlist-item/playlist-item.component';
 
 //Services
 import { PlaylistService } from 'src/app/services/playlist/playlist.service';
+import { FilaEsperaComponent } from './fila-espera/fila-espera.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { PlaylistService } from 'src/app/services/playlist/playlist.service';
     CabecalhoComponent,
     RodapeComponent,
     PlaylistComponent,
-    PlaylistItemComponent
+    PlaylistItemComponent,
+    FilaEsperaComponent
   ],
   imports: [
     BrowserModule,
