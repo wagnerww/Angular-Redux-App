@@ -16,6 +16,7 @@ import { PlaylistItemComponent } from './playlist-item/playlist-item.component';
 //Services
 import { PlaylistService } from 'src/app/services/playlist/playlist.service';
 import { FilaEsperaComponent } from './fila-espera/fila-espera.component';
+import { FilaEsperaItemComponent } from './fila-espera-item/fila-espera-item.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { FilaEsperaComponent } from './fila-espera/fila-espera.component';
     RodapeComponent,
     PlaylistComponent,
     PlaylistItemComponent,
-    FilaEsperaComponent
+    FilaEsperaComponent,
+    FilaEsperaItemComponent
   ],
   imports: [
     BrowserModule,

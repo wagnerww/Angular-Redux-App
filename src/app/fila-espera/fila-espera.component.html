@@ -1,3 +1,18 @@
-<p>
-  fila-espera works!
-</p>
+<div class="lista_icon">
+        <div class="sobrepor">
+            <span class="lb_x2"><i class="fas fa-list"></i></span>                    
+            <div class="list">
+                <div class="circle" [style.opacity]="Counter>=1 && '1'"><span class="lb_x1">{{Counter}}</span></div>                            
+            </div>
+        </div>
+        <div id="Fila" class="list_fila">
+            <div class="Fila_Itens">
+                <div class="title_fila">
+                    <span class="lb_x1_5">Fila de reprodução</span>
+                </div>
+                <div class="scroll_fila">
+                    <app-fila-espera-item *ngFor="let musica of Fila" [music]="musica"></app-fila-espera-item> 
+                </div>  
+            </div>
+        </div>
+</div>     
