@@ -11,14 +11,16 @@ import { FilaInterface } from 'src/app/interfaces/fila.interface';
 export class FilaEsperaComponent implements OnInit {
 
   Counter:number=0;
-  FilaObserver: Observable<FilaInterface>;
+  FilaObserver: Observable<FilaInterface[]>;
   Fila:FilaInterface[] = [];
-  constructor(private store: Store<FilaInterface>) { 
+  constructor(private store: Store<FilaInterface[]>) { 
      this.FilaObserver = store.select('addFila');
-     this.FilaObserver.subscribe((res:FilaInterface) => {
+
+     this.FilaObserver.subscribe((res) => {
+       console.log('res ',res);
        if(res){
-          this.Fila.push(res);
-          this.Counter = this.Fila.length;
+          this.Fila = res;
+          this.Counter = res.length;
           console.log('Fila', this.Fila);
        }
      });
@@ -26,6 +28,7 @@ export class FilaEsperaComponent implements OnInit {
   }
 
   ngOnInit() {
+   
   }
 
 }

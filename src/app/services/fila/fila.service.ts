@@ -12,9 +12,16 @@ export class FilaService {
 
   constructor() { }
 
-  addFila(Musica:any){
+  addMusica(Musica:any){
     this.filaInterface =  Musica.Musica;    
     console.log('Insert ',this.filaInterface);
     return this.filaInterface;   
   }
+
+  removeMusica(MusicaArray:FilaInterface[], MusicID:number){
+    MusicaArray.map((musica) => {
+      console.log('remove ',musica);
+    });
+  }
+
 }
