@@ -14,7 +14,7 @@ export function addFilaReducer(state:FilaInterface[] = [], action: Action) {
 	switch (action.type) {
 		case addMusica:
 			state = FilaService.prototype.addMusica(action);		
-			//Fila.push(state);
+			
 			console.log('Fila state ',state);
 			return [...state];
 

@@ -20,6 +20,7 @@ export class FilaService {
     Fila.push(this.filaInterface);
     console.log('Insert ',Fila);
     return Fila;
+    
   }
 
   removeMusica(MusicID:number){
