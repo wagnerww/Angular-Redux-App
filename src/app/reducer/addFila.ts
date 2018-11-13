@@ -13,13 +13,13 @@ export function addFilaReducer(state:FilaInterface[] = [], action: Action) {
 	console.log('state ', state)
 	switch (action.type) {
 		case addMusica:
-			state.push(Fila = FilaService.prototype.addMusica(action));
-		
+			state = FilaService.prototype.addMusica(action);		
 			//Fila.push(state);
 			console.log('Fila state ',state);
 			return [...state];
 
 		case removeMusica:
+
 			console.log('remove ',state);
 			return state;
 
