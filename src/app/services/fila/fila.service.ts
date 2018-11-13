@@ -23,7 +23,18 @@ export class FilaService {
 
   }
 
-  removeMusica(id:number){
+  removeMusica(id:any){
+    let index:number=0;
+    Fila.map((res, index) => {
+      this.filaInterface = res;      
+      if(this.filaInterface.Musicas.id===id){
+        return index;
+      } 
+    
+    });
+
+    console.log('index ', index);
+
     Fila.splice(id);
     return Fila;
     //Fila.remove()

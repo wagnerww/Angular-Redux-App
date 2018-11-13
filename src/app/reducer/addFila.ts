@@ -19,9 +19,9 @@ export function addFilaReducer(state:FilaInterface[] = [], action: Action) {
 			return [...state];
 
 		case removeMusica:
-
+			state = FilaService.prototype.removeMusica(action);
 			console.log('remove ',state);
-			return state;
+			return [...state];
 
 		case limparFila:
 			return 0;
