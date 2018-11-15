@@ -3,7 +3,7 @@ import { MusicaModel } from 'src/app/models/Musica.Model';
 import { FilaService } from 'src/app/services/fila/fila.service';
 import { Store } from '@ngrx/store';
 import { PlaylistInterface } from 'src/app/interfaces/playlist.Interface';
-import { addMusica } from 'src/app/reducer/addFila';
+import { addMusica } from 'src/app/reducer/Fila.reducer';
 import { MusicaInterface } from 'src/app/interfaces/musica.interface';
 
 interface AppState {

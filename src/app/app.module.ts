@@ -4,7 +4,7 @@ import { HttpClientModule } from '@angular/common/http';
 
 //Reducers
 import { StoreModule } from '@ngrx/store';
-import { addFilaReducer } from './reducer/addFila';
+import { FilaReducer } from './reducer/Fila.reducer';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -32,7 +32,7 @@ import { FilaEsperaItemComponent } from './fila-espera-item/fila-espera-item.com
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    StoreModule.forRoot({ addFila: addFilaReducer })
+    StoreModule.forRoot({ Fila: FilaReducer })
   ],
   providers: [PlaylistService],
   bootstrap: [AppComponent]

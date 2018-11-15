@@ -14,6 +14,6 @@ export class PlaylistService {
   constructor(private http:HttpClient) { }
 
   getPlaylist(){
-      return this.http.get<PlaylistInterface[]>('http://localhost:3000/Musicas/');  
+      return this.http.get<PlaylistInterface>('http://localhost:3000/Playlist/');  
   }
 }

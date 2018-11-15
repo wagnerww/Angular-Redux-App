@@ -14,7 +14,7 @@ export class FilaEsperaComponent implements OnInit {
   FilaObserver: Observable<MusicaInterface[]>;
   Fila:MusicaInterface[] = [];
   constructor(private store: Store<MusicaInterface[]>) { 
-     this.FilaObserver = store.select('addFila');
+     this.FilaObserver = store.select('Fila');
 
      this.FilaObserver.subscribe((res) => {
        console.log('res ',res);

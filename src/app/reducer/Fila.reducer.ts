@@ -6,7 +6,7 @@ export const addMusica = 'addMusica';
 export const removeMusica = 'removeMusica';
 export const limparFila = 'limparFila';
 	
-export function addFilaReducer(state:MusicaInterface[] = [], action: Action) {
+export function FilaReducer(state:MusicaInterface[] = [], action: Action) {
 	
 	console.log('type ', action)
 	console.log('state ', state)

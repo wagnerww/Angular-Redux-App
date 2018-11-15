@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 import { PlaylistService } from 'src/app/services/playlist/playlist.service';
 import {PlaylistInterface} from 'src/app/interfaces/playlist.Interface';
 import { MusicaModel } from 'src/app/models/Musica.Model';
@@ -10,15 +10,13 @@ import { MusicaModel } from 'src/app/models/Musica.Model';
 })
 export class PlaylistComponent implements OnInit {
 
-  playlist : PlaylistInterface[];
+  playlist : PlaylistInterface;
   Model:MusicaModel;
 
   constructor(private services:PlaylistService) { }
 
   ngOnInit() {
-   this.services.getPlaylist().subscribe(res => {
-      this.playlist = res;
-   });
+    this.playlist = this.services.getPlaylist();
   }
 
 }
