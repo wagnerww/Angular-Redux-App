@@ -1,13 +1,12 @@
 import { ActionReducer, Action } from '@ngrx/store';
 import { FilaService } from 'src/app/services/fila/fila.service';
-import { FilaInterface } from 'src/app/interfaces/fila.interface';
+import { MusicaInterface } from 'src/app/interfaces/musica.interface';
 
 export const addMusica = 'addMusica';
 export const removeMusica = 'removeMusica';
 export const limparFila = 'limparFila';
-let Fila:FilaInterface;
 	
-export function addFilaReducer(state:FilaInterface[] = [], action: Action) {
+export function addFilaReducer(state:MusicaInterface[] = [], action: Action) {
 	
 	console.log('type ', action)
 	console.log('state ', state)

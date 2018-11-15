@@ -3,7 +3,7 @@ import { ActionReducer, Action } from '@ngrx/store';
 import { MusicaInterface } from 'src/app/interfaces/musica.interface';
 import { FilaInterface } from 'src/app/interfaces/fila.interface';
 
-let Fila:FilaInterface[] = [];
+let Fila:MusicaInterface[] = [];
 
 @Injectable({
   providedIn: 'root'
@@ -11,13 +11,13 @@ let Fila:FilaInterface[] = [];
 
 export class FilaService {
    
-  filaInterface:FilaInterface;
+  musicaInterface:MusicaInterface;
     
   constructor() { }
 
-  addMusica(Musica:any){    
-    this.filaInterface =  Musica.Musica;
-    Fila.push(this.filaInterface);
+  addMusica(MusicaIn:any){
+    this.musicaInterface =  MusicaIn.Musica;
+    Fila.push(this.musicaInterface);
     console.log('Insert ',Fila);
     return Fila;
 
@@ -26,21 +26,13 @@ export class FilaService {
   removeMusica(MusicaIn:any){  
     let index:number=0;
     let Musica:MusicaInterface =  MusicaIn.Musica;
-    console.log('musica ',Musica);   
-   
-    Fila.map((res:MusicaInterface, index) => {
-      index ++;     
-      console.log('filar ',res);
-      if(Musica.id===res.id){
-        console.log('achou ',index);
-        return index;
-      }
+    console.log('musica ',Musica);
+    index = Fila.findIndex((res:MusicaInterface) => res.id===Musica.id)
     
-    });
-
     console.log('index ', index);
 
-    Fila.splice(index);
+    Fila.splice(index, 1);
+    console.log('Fila status ', Fila);
     return Fila;
     //Fila.remove()
       //console.log('remove ',musica);
