@@ -19,7 +19,7 @@ export class FilaEsperaItemComponent implements OnInit {
     
   }
 
-  removeMusica(Musica){
+  removeMusica(Musica:MusicaInterface){
     this.store.dispatch({ type: removeMusica,  Musica })
   }
 

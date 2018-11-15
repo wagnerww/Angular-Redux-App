@@ -12,7 +12,7 @@ let Fila:FilaInterface[] = [];
 export class FilaService {
    
   filaInterface:FilaInterface;
-  
+    
   constructor() { }
 
   addMusica(Musica:any){    
@@ -23,19 +23,24 @@ export class FilaService {
 
   }
 
-  removeMusica(id:any){
+  removeMusica(MusicaIn:any){  
     let index:number=0;
-    Fila.map((res, index) => {
-      this.filaInterface = res;      
-      if(this.filaInterface.Musicas.id===id){
+    let Musica:MusicaInterface =  MusicaIn.Musica;
+    console.log('musica ',Musica);   
+   
+    Fila.map((res:MusicaInterface, index) => {
+      index ++;     
+      console.log('filar ',res);
+      if(Musica.id===res.id){
+        console.log('achou ',index);
         return index;
-      } 
+      }
     
     });
 
     console.log('index ', index);
 
-    Fila.splice(id);
+    Fila.splice(index);
     return Fila;
     //Fila.remove()
       //console.log('remove ',musica);
