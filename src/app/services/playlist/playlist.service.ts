@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { MusicaModel } from 'src/app/models/Musica.Model';
 import {PlaylistInterface} from 'src/app/interfaces/playlist.Interface';
+import {Observable} from 'rxjs';
 
 
 @Injectable({
@@ -13,7 +14,7 @@ export class PlaylistService {
 
   constructor(private http:HttpClient) { }
 
-  getPlaylist(){
-      return this.http.get<PlaylistInterface>('http://localhost:3000/Playlist/');  
+  getPlaylist():Observable<PlaylistInterface>{
+      return this.http.get<PlaylistInterface>('http://localhost:3000/Playlist/');
   }
 }

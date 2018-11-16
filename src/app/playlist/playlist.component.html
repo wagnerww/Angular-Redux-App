@@ -1,5 +1,5 @@
 <main>
     
-    <app-playlist-item *ngFor="let musica of playlist.Musicas | async" [Music]="musica"></app-playlist-item>
+    <app-playlist-item *ngFor="let musica of playlist?.Musicas" [Music]="musica"></app-playlist-item>
     
 </main>
