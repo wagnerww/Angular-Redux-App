@@ -4,13 +4,13 @@ import { PlaylistInterface } from 'src/app/interfaces/playlist.Interface';
 
 
 @Component({
-  selector: 'app-cabecalho',
+  selector: 'header',
   templateUrl: './cabecalho.component.html',
   styleUrls: ['./cabecalho.component.css']
 })
 export class CabecalhoComponent implements OnInit {
 
-  NomePlaylist:string='Playlist';
+  NomePlaylist:string='Bike songs';
  
  
   constructor(private services:PlaylistService) {      

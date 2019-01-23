@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-rodape',
+  selector: 'footer',
   templateUrl: './rodape.component.html',
   styleUrls: ['./rodape.component.css']
 })
